@@ -1,38 +1,213 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap");
+
+
+body{
+  background-color:rgb(33 ,48, 252);
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(150, 163, 187,1);
+  font-size: 13px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.app-layout{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 50px 50px 50px;
+}
+
+.app-container{
+  position: relative;
+  overflow: hidden;
+  /* padding: 20px; */
+}
+
+/* //header css start*/
+.app-container .app-header{
+  float: right;
+  padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.app-container .app-header .app-site-info{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-site-info h1{
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  font-weight: 800;
+}
+ 
+.app-site-info .title-info{
+  margin: 13px 0 0 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: 300;
+  color: rgb(255 ,255, 255,0.8);
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-site-info .site-slogan{
+  margin-top: 5px;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 300;
+  color: rgb(255 ,255, 255,0.5);
 }
+/* header css ends */
+
+/* content css starts*/
+.app-container .app-content{
+  float: left;
+  
+}
+
+.app-card{
+  position: relative;
+  overflow: hidden;
+  background: white;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.app-card-header{
+  background: rgb(243, 240, 230);
+}
+
+.app-card .app-card-header .app-card-header-inner{
+  padding: 20px;
+}
+
+.app-card .app-card-content .app-card-content-inner{
+  padding: 20px;
+}
+
+.app-file-select-zone{
+  width: 100%;
+  display: block;
+  text-align: center; 
+}
+
+
+
+.app-file-select-zone label{
+  display: block;
+  width: 100%;
+}
+
+.app-file-select-zone label input{
+  position: fixed;
+  top: -9999px;
+}
+.app-file-select-zone .app-upload-description{
+  font-size: 13px;
+  display: block;
+}
+
+.app-file-select-zone .app-upload-icon{
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 90px;
+  height: 45px;
+  border: 1px dashed;
+  border-radius: 4px;
+  border-color:  rgb(150, 163, 187,1);
+
+}
+
+.app-form-item{
+  margin: 0 0 15px 0;
+}
+
+.app-form-item label{
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.app-form-item input[type="text"], .app-form-item textarea{
+  width: 100%;
+  border: 1px solid;
+  border-color: rgb(224, 224, 224,1);
+  outline: 0 none;
+  padding: 8px;
+  border-radius: 5px;
+}
+.app-form-item input[type="text"] :focus :active,
+.app-form-item textarea :focus :active{
+  outline: 0 none;
+}
+
+textarea{
+  min-height: 70px;
+}
+
+.app-form-action .app-button{
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  padding: 8px 15px;
+  border: 1px solid;
+  border-color: rgb(33 ,48, 252);
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.primary{
+  background: rgb(33 ,48, 252);
+  color:rgb(255, 255, 255);
+}
+
+/* File selections */
+.app-files-selected{
+  background: white;
+  position: relative;
+  margin: -20px -20px 20px -20px;
+  padding: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.app-files-selected .app-files-selected-item{
+  display: flex;
+  border-bottom: 1px solid rgb(0, 0, 0,0.05);
+  padding: 10px 0;
+}
+
+.app-files-selected .app-files-selected-item .filename{
+  flex-grow: 1;
+}
+
+.app-file-remove{
+  border: 0 none;
+  padding: 3px;
+  font-size: 16px;
+  font-weight: 100;
+  background: none;
+  color: rgb(150, 163, 187,1);
+}
+
+.text-uppercase{
+  text-transform: uppercase;
+}
+
+.error{
+  color: rgb(241, 12, 43);
+}
+
+.error .app-upload-icon{
+  border-color: rgb(241, 12, 43);
+}
+
+.error input[type="text"]{
+  border-color: rgb(241, 12, 43);
+}
+
+
